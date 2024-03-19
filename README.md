@@ -1,4 +1,4 @@
-# Bal Constrained Algencan 
+# Ball Constrained Algencan 
 
 #### Beforehand settings
 
