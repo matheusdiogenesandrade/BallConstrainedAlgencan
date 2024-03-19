@@ -17,7 +17,7 @@
  OUTER-ITERATIONS-LIMIT                                                    1000
  NUMBER-OF-ARRAYS-COMPONENTS-IN-OUTPUT                                        6
  ACCELERATION-PROCESS-ITERATIONS-LIMIT                                     1000
- PENALTY-PARAMETER-INITIAL-VALUE                                 1.00000000D-01
+ PENALTY-PARAMETER-INITIAL-VALUE                                 1.00000000D-05
  LARGEST-PENALTY-PARAMETER-ALLOWED                               1.00000000D+22
  SOLUTION-FILENAME                                                    'SOL.SOL'
  OBJECTIVE-AND-CONSTRAINTS-SCALING-AVOIDED    
@@ -79,50 +79,57 @@
 out penalt  objective infeas infeas norm   norm   |Grad|  inner Newton opt sc
 ite         function  ibilty +compl graLag point  infeas  totit forKKT factor
   0         1.652D+03 0.D+00 0.D+00 2.D+00 1.D+00 0.D+00     0   0   0 1.D+00
-  1 1.D-01  0.000D+00 1.D+00 1.D+00 0.D+00 1.D+00 1.D+00     2C  0   0 7.D+02
-  2 1.D-01  0.000D+00 1.D+00 1.D+00 0.D+00 1.D+00 1.D+00     2C  0   0 7.D+02
-  3 1.D+00  0.000D+00 1.D+00 1.D+00 0.D+00 1.D+00 1.D+00     2C  0   0 7.D+02
-  4 1.D+01  0.000D+00 1.D+00 1.D+00 0.D+00 1.D+00 1.D+00     2C  0   0 6.D+02
-  5 1.D+02  0.000D+00 1.D+00 1.D+00 0.D+00 1.D+00 1.D+00     2C  0   0 5.D+02
-  6 1.D+03  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00     5P  0   0 1.D+03
-  7 1.D+04  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00     8P  0   0 1.D+04
-  8 1.D+05  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    11P  0   0 1.D+05
-  9 1.D+06  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    14P  0   0 1.D+06
+  1 1.D-05  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00     3C  0   0 7.D+02
+  2 1.D-05  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00     6P  0   0 7.D+02
+  3 1.D-04  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00     9P  0   0 7.D+02
+  4 1.D-03  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    12P  0   0 7.D+02
+  5 1.D-02  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    15P  0   0 7.D+02
+  6 1.D-01  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    18P  0   0 7.D+02
+  7 1.D+00  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    21P  0   0 7.D+02
+  8 1.D+01  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    24P  0   0 7.D+02
+  9 1.D+02  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    27P  0   0 7.D+02
 
 out penalt  objective infeas infeas norm   norm   |Grad|  inner Newton opt sc
 ite         function  ibilty +compl graLag point  infeas  totit forKKT factor
- 10 1.D+07  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    17P  0   0 1.D+07
- 11 1.D+08  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    20P  0   0 1.D+08
- 12 1.D+09  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    23P  0   0 1.D+09
- 13 1.D+10  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    26P  0   0 1.D+10
- 14 1.D+11  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    29P  0   0 1.D+11
- 15 1.D+12  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    32P  0   0 1.D+12
- 16 1.D+13  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    35P  0   0 1.D+13
- 17 1.D+14  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    38P  0   0 1.D+14
- 18 1.D+15  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    41P  0   0 1.D+15
- 19 1.D+16  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    44P  0   0 1.D+16
+ 10 1.D+03  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    30P  0   0 1.D+03
+ 11 1.D+04  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    33P  0   0 1.D+04
+ 12 1.D+05  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    36P  0   0 1.D+05
+ 13 1.D+06  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    39P  0   0 1.D+06
+ 14 1.D+07  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    42P  0   0 1.D+07
+ 15 1.D+08  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    45P  0   0 1.D+08
+ 16 1.D+09  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    48P  0   0 1.D+09
+ 17 1.D+10  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    51P  0   0 1.D+10
+ 18 1.D+11  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    54P  0   0 1.D+11
+ 19 1.D+12  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    57P  0   0 1.D+12
 
 out penalt  objective infeas infeas norm   norm   |Grad|  inner Newton opt sc
 ite         function  ibilty +compl graLag point  infeas  totit forKKT factor
- 20 1.D+17  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    47P  0   0 1.D+17
- 21 1.D+18  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    50P  0   0 1.D+18
- 22 1.D+19  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    53P  0   0 1.D+19
- 23 1.D+20  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    56P  0   0 1.D+20
- 24 1.D+21  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    59P  0   0 1.D+20
- 25 1.D+22  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    62P  0   0 1.D+20
- 26 1.D+23  0.000D+00 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    65P  0   0 1.D+20
+ 20 1.D+13  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    60P  0   0 1.D+13
+ 21 1.D+14  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    63P  0   0 1.D+14
+ 22 1.D+15  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    66P  0   0 1.D+15
+ 23 1.D+16  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    69P  0   0 1.D+16
+ 24 1.D+17  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    72P  0   0 1.D+17
+ 25 1.D+18  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    75P  0   0 1.D+18
+ 26 1.D+19  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    78P  0   0 1.D+19
+ 27 1.D+20  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    81P  0   0 1.D+20
+ 28 1.D+21  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    84P  0   0 1.D+20
+ 29 1.D+22  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    87P  0   0 1.D+20
+
+out penalt  objective infeas infeas norm   norm   |Grad|  inner Newton opt sc
+ite         function  ibilty +compl graLag point  infeas  totit forKKT factor
+ 30 1.D+23  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    90P  0   0 1.D+20
 
  Flag of ALGENCAN: The penalty parameter is too large.
  The problem may be infeasible or badly scaled. Further analysis is required.
 
  User-provided subroutines calls counters: 
 
- Subroutine fsub     (coded=T):     1761
- Subroutine gsub     (coded=T):      145
- Subroutine hsub     (coded=T):       43
- Subroutine csub     (coded=T):    44675 (    1787 calls per constraint in avg)
- Subroutine jacsub   (coded=T):     4300 (     172 calls per constraint in avg)
- Subroutine hcsub    (coded=T):     1075 (      43 calls per constraint in avg)
+ Subroutine fsub     (coded=T):     4871
+ Subroutine gsub     (coded=T):      181
+ Subroutine hsub     (coded=T):        0
+ Subroutine csub     (coded=T):   122525 (    4901 calls per constraint in avg)
+ Subroutine jacsub   (coded=T):     5300 (     212 calls per constraint in avg)
+ Subroutine hcsub    (coded=T):        0 (       0 calls per constraint in avg)
  Subroutine fcsub    (coded=F):        0
  Subroutine gjacsub  (coded=F):        0
  Subroutine gjacpsub (coded=F):        0
@@ -130,4 +137,4 @@ ite         function  ibilty +compl graLag point  infeas  totit forKKT factor
  Subroutine hlpsub   (coded=F):        0
 
 
- Total CPU time in seconds =     0.86
+ Total CPU time in seconds =     1.48
