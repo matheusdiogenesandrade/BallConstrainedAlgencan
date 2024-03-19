@@ -338,6 +338,37 @@ int main() {
     for (int i = 0; i < seq.size(); ++i)
         getElement(x.data(), seq[i] - 1, i) = 1.;
 
+    vector<double> lagrangian_coeffs = {
+        -504.0,
+        -292.0,
+        -192.0,
+        -232.0,
+        -300.0,
+        -364.0,
+        -184.0,
+        -420.0,
+        -564.0,
+        -572.0,
+        -484.0,
+        -660.0,
+        0.0,
+        -204.0,
+        -220.0,
+        112.0,
+        -220.0,
+        -264.0,
+        -296.0,
+        -8.0,
+        -32.0,
+        -168.0,
+        -100.0,
+        -256.0,
+        21.0,
+    };
+    for (int i = 0; i < m; ++i)
+        lambda[i] = lagrangian_coeffs[i];
+
+
     //
     for (int k = 0; k < m; ++k)
         equatn[k] = true;
@@ -379,28 +410,28 @@ int main() {
     char *outputfnm = "algencan.out";
     char *specfnm = "";
 
-    int nvparam = 1;
-//    int nvparam = 17;
+//    int nvparam = 1;
+    int nvparam = 17;
 
     //
     char **vparam = ( char ** ) malloc( nvparam * sizeof( char * ) );
     vparam[0]  = "ITERATIONS-OUTPUT-DETAIL 10";
-//    vparam[1]  = "INNER-ITERATIONS-LIMIT 1000";
-//    vparam[2]  = "OUTER-ITERATIONS-LIMIT 1000";
-//    vparam[3]  = "NUMBER-OF-ARRAYS-COMPONENTS-IN-OUTPUT 6";
-//    vparam[4]  = "ACCELERATION-PROCESS-ITERATIONS-LIMIT 1000";
-//    vparam[5]  = "PENALTY-PARAMETER-INITIAL-VALUE 1e-13";
-//    vparam[6]  = "LARGEST-PENALTY-PARAMETER-ALLOWED 1e22";
-//    vparam[7]  = "SOLUTION-FILENAME sol.sol";
-//    vparam[8]  = "OBJECTIVE-AND-CONSTRAINTS-SCALING-AVOIDED";
-//    vparam[9]  = "FIXED-VARIABLES-REMOVAL-AVOIDED";
-//    vparam[10] = "LINEAR-SYSTEMS-SOLVER-IN-ACCELERATION-PROCESS MA97";
-//    vparam[11] = "TRUST-REGIONS-INNER-SOLVER MA57";
-//    vparam[12] = "LINEAR-SYSTEMS-SOLVER-IN-TRUST-REGIONS MA97";
-//    vparam[13] = "NEWTON-LINE-SEARCH-INNER-SOLVER MA97";
-//    vparam[14] = "LINEAR-SYSTEMS-SOLVER-IN-NEWTON-LINE-SEARCH MA97";
-//    vparam[15] = "TRUNCATED-NEWTON-LINE-SEARCH-INNER-SOLVER TRUEHP";
-//    vparam[16] = "MATRIX-VECTOR-PRODUCT-IN-TRUNCATED-NEWTON-LS TRUEHP";
+    vparam[1]  = "INNER-ITERATIONS-LIMIT 1000";
+    vparam[2]  = "OUTER-ITERATIONS-LIMIT 1000";
+    vparam[3]  = "NUMBER-OF-ARRAYS-COMPONENTS-IN-OUTPUT 6";
+    vparam[4]  = "ACCELERATION-PROCESS-ITERATIONS-LIMIT 1000";
+    vparam[5]  = "PENALTY-PARAMETER-INITIAL-VALUE 1e-5";
+    vparam[6]  = "LARGEST-PENALTY-PARAMETER-ALLOWED 1e22";
+    vparam[7]  = "SOLUTION-FILENAME sol.sol";
+    vparam[8]  = "OBJECTIVE-AND-CONSTRAINTS-SCALING-AVOIDED";
+    vparam[9]  = "FIXED-VARIABLES-REMOVAL-AVOIDED";
+    vparam[10] = "LINEAR-SYSTEMS-SOLVER-IN-ACCELERATION-PROCESS MA97";
+    vparam[11] = "TRUST-REGIONS-INNER-SOLVER MA57";
+    vparam[12] = "LINEAR-SYSTEMS-SOLVER-IN-TRUST-REGIONS MA97";
+    vparam[13] = "NEWTON-LINE-SEARCH-INNER-SOLVER MA97";
+    vparam[14] = "LINEAR-SYSTEMS-SOLVER-IN-NEWTON-LINE-SEARCH MA97";
+    vparam[15] = "TRUNCATED-NEWTON-LINE-SEARCH-INNER-SOLVER TRUEHP";
+    vparam[16] = "MATRIX-VECTOR-PRODUCT-IN-TRUNCATED-NEWTON-LS TRUEHP";
 
 //    vparam[13]  = "SKIP-ACCELERATION-PROCESS";
 //    vparam[15]  = "ADD-SLACKS";
