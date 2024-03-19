@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/main.dir/src/main.cpp.o -o main  /home/matheusdiogenesandrade/scaled-algencan/algencan-3.1.1_scaled/lib/libalgencan.so -lgfortran -lm 
