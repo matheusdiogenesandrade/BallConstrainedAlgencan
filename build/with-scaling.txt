@@ -1,0 +1,140 @@
+
+ ==============================================================================
+ This is ALGENCAN 3.1.1.
+ ALGENCAN, an Augmented Lagrangian method for nonlinear programming, is part of
+ the TANGO Project: Trustable Algorithms for Nonlinear General Optimization.
+ See http://www.ime.usp.br/~egbirgin/tango/ for details.
+ ==============================================================================
+ Scaled ALGENCAN is a modification of ALGENCAN that implements the additional
+ option of scaling the final solution.
+ See https://github.com/leonardosecchin/scaled-algencan for details.
+ ==============================================================================
+
+ Processing array of parameters with  17 entrances:
+
+ ITERATIONS-OUTPUT-DETAIL                                                    10
+ INNER-ITERATIONS-LIMIT                                                    1000
+ OUTER-ITERATIONS-LIMIT                                                    1000
+ NUMBER-OF-ARRAYS-COMPONENTS-IN-OUTPUT                                        6
+ ACCELERATION-PROCESS-ITERATIONS-LIMIT                                     1000
+ PENALTY-PARAMETER-INITIAL-VALUE                                 1.00000000D-05
+ LARGEST-PENALTY-PARAMETER-ALLOWED                               1.00000000D+22
+ SOLUTION-FILENAME                                                    'SOL.SOL'
+ OBJECTIVE-AND-CONSTRAINTS-SCALING-AVOIDED    
+ FIXED-VARIABLES-REMOVAL-AVOIDED              
+ LINEAR-SYSTEMS-SOLVER-IN-ACCELERATION-PROCESS                           'MA97'
+ TRUST-REGIONS-INNER-SOLVER                                              'MA57'
+ LINEAR-SYSTEMS-SOLVER-IN-TRUST-REGIONS                                  'MA97'
+ NEWTON-LINE-SEARCH-INNER-SOLVER                                         'MA97'
+ LINEAR-SYSTEMS-SOLVER-IN-NEWTON-LINE-SEARCH                             'MA97'
+ TRUNCATED-NEWTON-LINE-SEARCH-INNER-SOLVER                             'TRUEHP'
+ MATRIX-VECTOR-PRODUCT-IN-TRUNCATED-NEWTON-LS                          'TRUEHP'
+
+ The specification file is not being used.
+
+ Available HSL subroutines = MA57 MA86 MA97 
+
+ ALGENCAN PARAMETERS:
+
+ firstde                =                    T
+ seconde                =                    T
+ truehpr                =                    T
+ hptype in TN           =               TRUEHP
+ lsslvr in TR           =            MA57/MC64
+ lsslvr in NW           =            MA97/MC64
+ lsslvr in ACCPROC      =            MA97/MC64
+ innslvr                =                   TN
+ accproc                =                    T
+ rmfixv                 =                    F
+ slacks                 =                    F
+ scale                  =                    F
+ epsfeas                =           1.0000D-08
+ epsopt                 =           1.0000D-08
+ efstain                =           1.0000D-04
+ eostain                =           1.0000D-12
+ efacc                  =           1.0000D-04
+ eoacc                  =           1.0000D-04
+ iprint                 =                   10
+ ncomp                  =                    6
+
+ Specification filename =                   ''
+ Output filename        =       'algencan.out'
+ Solution filename      =            'SOL.SOL'
+
+ SCALED ALGENCAN PARAMETERS:
+
+ Scale solution         =                    T
+ Max opt scale factor   =           1.0000D+20
+
+ Number of variables               :     144
+ Number of equality constraints    :      25
+ Number of inequality constraints  :       0
+ Number of bound constraints       :     288
+ Number of fixed variables         :       0
+
+ Entry to ALGENCAN.
+ Number of variables  :     144
+ Number of constraints:      25
+
+out penalt  objective infeas infeas norm   norm   |Grad|  inner Newton opt sc
+ite         function  ibilty +compl graLag point  infeas  totit forKKT factor
+  0         1.652D+03 0.D+00 0.D+00 2.D+00 1.D+00 0.D+00     0   0   0 1.D+00
+  1 1.D-05  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00     3C  0   0 7.D+02
+  2 1.D-05  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00     6P  0   0 7.D+02
+  3 1.D-04  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00     9P  0   0 7.D+02
+  4 1.D-03  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    12P  0   0 7.D+02
+  5 1.D-02  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    15P  0   0 7.D+02
+  6 1.D-01  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    18P  0   0 7.D+02
+  7 1.D+00  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    21P  0   0 7.D+02
+  8 1.D+01  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    24P  0   0 7.D+02
+  9 1.D+02  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    27P  0   0 7.D+02
+
+out penalt  objective infeas infeas norm   norm   |Grad|  inner Newton opt sc
+ite         function  ibilty +compl graLag point  infeas  totit forKKT factor
+ 10 1.D+03  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    30P  0   0 1.D+03
+ 11 1.D+04  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    33P  0   0 1.D+04
+ 12 1.D+05  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    36P  0   0 1.D+05
+ 13 1.D+06  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    39P  0   0 1.D+06
+ 14 1.D+07  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    42P  0   0 1.D+07
+ 15 1.D+08  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    45P  0   0 1.D+08
+ 16 1.D+09  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    48P  0   0 1.D+09
+ 17 1.D+10  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    51P  0   0 1.D+10
+ 18 1.D+11  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    54P  0   0 1.D+11
+ 19 1.D+12  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    57P  0   0 1.D+12
+
+out penalt  objective infeas infeas norm   norm   |Grad|  inner Newton opt sc
+ite         function  ibilty +compl graLag point  infeas  totit forKKT factor
+ 20 1.D+13  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    60P  0   0 1.D+13
+ 21 1.D+14  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    63P  0   0 1.D+14
+ 22 1.D+15  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    66P  0   0 1.D+15
+ 23 1.D+16  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    69P  0   0 1.D+16
+ 24 1.D+17  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    72P  0   0 1.D+17
+ 25 1.D+18  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    75P  0   0 1.D+18
+ 26 1.D+19  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    78P  0   0 1.D+19
+ 27 1.D+20  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    81P  0   0 1.D+20
+ 28 1.D+21  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    84P  0   0 1.D+20
+ 29 1.D+22  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    87P  0   0 1.D+20
+
+out penalt  objective infeas infeas norm   norm   |Grad|  inner Newton opt sc
+ite         function  ibilty +compl graLag point  infeas  totit forKKT factor
+ 30 1.D+23  1.038D+03 1.D+00 1.D+00 2.D+00 1.D+00 1.D+00    90P  0   0 1.D+20
+
+ Flag of ALGENCAN: The penalty parameter is too large.
+ The problem may be infeasible or badly scaled. Further analysis is required.
+
+ User-provided subroutines calls counters: 
+
+ Subroutine fsub     (coded=T):     4871
+ Subroutine gsub     (coded=T):      181
+ Subroutine hsub     (coded=T):        0
+ Subroutine csub     (coded=T):   122525 (    4901 calls per constraint in avg)
+ Subroutine jacsub   (coded=T):     5300 (     212 calls per constraint in avg)
+ Subroutine hcsub    (coded=T):        0 (       0 calls per constraint in avg)
+ Subroutine fcsub    (coded=F):        0
+ Subroutine gjacsub  (coded=F):        0
+ Subroutine gjacpsub (coded=F):        0
+ Subroutine hlsub    (coded=F):        0
+ Subroutine hlpsub   (coded=F):        0
+
+
+ Total CPU time in seconds =     1.49

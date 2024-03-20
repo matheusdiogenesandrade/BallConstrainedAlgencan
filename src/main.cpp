@@ -338,6 +338,7 @@ int main() {
     for (int i = 0; i < seq.size(); ++i)
         getElement(x.data(), seq[i] - 1, i) = 1.;
 
+    /* Initial lambda */
     vector<double> lagrangian_coeffs = {
         504.0,
         292.0,
@@ -367,7 +368,6 @@ int main() {
     };
     for (int i = 0; i < m; ++i)
         lambda[i] = lagrangian_coeffs[i];
-
 
     //
     for (int k = 0; k < m; ++k)
@@ -410,28 +410,30 @@ int main() {
     char *outputfnm = "algencan.out";
     char *specfnm = "";
 
-//    int nvparam = 1;
-    int nvparam = 17;
+    int nvparam = 2;
+//    int nvparam = 17;
 
     //
     char **vparam = ( char ** ) malloc( nvparam * sizeof( char * ) );
     vparam[0]  = "ITERATIONS-OUTPUT-DETAIL 10";
-    vparam[1]  = "INNER-ITERATIONS-LIMIT 1000";
-    vparam[2]  = "OUTER-ITERATIONS-LIMIT 1000";
-    vparam[3]  = "NUMBER-OF-ARRAYS-COMPONENTS-IN-OUTPUT 6";
-    vparam[4]  = "ACCELERATION-PROCESS-ITERATIONS-LIMIT 1000";
-    vparam[5]  = "PENALTY-PARAMETER-INITIAL-VALUE 1e-5";
-    vparam[6]  = "LARGEST-PENALTY-PARAMETER-ALLOWED 1e22";
-    vparam[7]  = "SOLUTION-FILENAME sol.sol";
-    vparam[8]  = "OBJECTIVE-AND-CONSTRAINTS-SCALING-AVOIDED";
-    vparam[9]  = "FIXED-VARIABLES-REMOVAL-AVOIDED";
-    vparam[10] = "LINEAR-SYSTEMS-SOLVER-IN-ACCELERATION-PROCESS MA97";
-    vparam[11] = "TRUST-REGIONS-INNER-SOLVER MA57";
-    vparam[12] = "LINEAR-SYSTEMS-SOLVER-IN-TRUST-REGIONS MA97";
-    vparam[13] = "NEWTON-LINE-SEARCH-INNER-SOLVER MA97";
-    vparam[14] = "LINEAR-SYSTEMS-SOLVER-IN-NEWTON-LINE-SEARCH MA97";
-    vparam[15] = "TRUNCATED-NEWTON-LINE-SEARCH-INNER-SOLVER TRUEHP";
-    vparam[16] = "MATRIX-VECTOR-PRODUCT-IN-TRUNCATED-NEWTON-LS TRUEHP";
+    vparam[1]  = "OBJECTIVE-AND-CONSTRAINTS-SCALING-AVOIDED";
+
+//    vparam[1]  = "INNER-ITERATIONS-LIMIT 1000";
+//    vparam[2]  = "OUTER-ITERATIONS-LIMIT 1000";
+//    vparam[3]  = "NUMBER-OF-ARRAYS-COMPONENTS-IN-OUTPUT 6";
+//    vparam[4]  = "ACCELERATION-PROCESS-ITERATIONS-LIMIT 1000";
+//    vparam[5]  = "PENALTY-PARAMETER-INITIAL-VALUE 1e-5";
+//    vparam[6]  = "LARGEST-PENALTY-PARAMETER-ALLOWED 1e22";
+//    vparam[7]  = "SOLUTION-FILENAME sol.sol";
+//    vparam[8]  = "OBJECTIVE-AND-CONSTRAINTS-SCALING-AVOIDED";
+//    vparam[9]  = "FIXED-VARIABLES-REMOVAL-AVOIDED";
+//    vparam[10] = "LINEAR-SYSTEMS-SOLVER-IN-ACCELERATION-PROCESS MA97";
+//    vparam[11] = "TRUST-REGIONS-INNER-SOLVER MA57";
+//    vparam[12] = "LINEAR-SYSTEMS-SOLVER-IN-TRUST-REGIONS MA97";
+//    vparam[13] = "NEWTON-LINE-SEARCH-INNER-SOLVER MA97";
+//    vparam[14] = "LINEAR-SYSTEMS-SOLVER-IN-NEWTON-LINE-SEARCH MA97";
+//    vparam[15] = "TRUNCATED-NEWTON-LINE-SEARCH-INNER-SOLVER TRUEHP";
+//    vparam[16] = "MATRIX-VECTOR-PRODUCT-IN-TRUNCATED-NEWTON-LS TRUEHP";
 
 //    vparam[13]  = "SKIP-ACCELERATION-PROCESS";
 //    vparam[15]  = "ADD-SLACKS";
